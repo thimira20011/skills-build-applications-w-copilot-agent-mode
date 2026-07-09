@@ -2,7 +2,8 @@ import CollectionPage from './CollectionPage.jsx';
 import { useApiCollection } from './useApiCollection.js';
 
 export default function Teams() {
-  const resource = useApiCollection('teams');
+  const apiEndpoint = '/api/teams/';
+  const resource = useApiCollection(apiEndpoint);
 
   return (
     <CollectionPage

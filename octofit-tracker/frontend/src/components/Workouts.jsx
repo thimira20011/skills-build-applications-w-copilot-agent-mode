@@ -2,7 +2,8 @@ import CollectionPage from './CollectionPage.jsx';
 import { useApiCollection } from './useApiCollection.js';
 
 export default function Workouts() {
-  const resource = useApiCollection('workouts');
+  const apiEndpoint = '/api/workouts/';
+  const resource = useApiCollection(apiEndpoint);
 
   return (
     <CollectionPage

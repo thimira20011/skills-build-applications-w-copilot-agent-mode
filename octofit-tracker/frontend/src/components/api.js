@@ -14,8 +14,8 @@ export function getApiBaseUrl() {
   return `http://localhost:${backendPort}`;
 }
 
-export function getApiResourceUrl(resource) {
-  return `${getApiBaseUrl()}/api/${resource}/`;
+export function getApiResourceUrl(endpointPath) {
+  return `${getApiBaseUrl()}${endpointPath}`;
 }
 
 export function getApiSetupMessage() {

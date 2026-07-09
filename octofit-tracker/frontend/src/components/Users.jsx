@@ -2,7 +2,8 @@ import CollectionPage from './CollectionPage.jsx';
 import { useApiCollection } from './useApiCollection.js';
 
 export default function Users() {
-  const resource = useApiCollection('users');
+  const apiEndpoint = '/api/users/';
+  const resource = useApiCollection(apiEndpoint);
 
   return (
     <CollectionPage

@@ -2,7 +2,8 @@ import CollectionPage from './CollectionPage.jsx';
 import { useApiCollection } from './useApiCollection.js';
 
 export default function Leaderboard() {
-  const resource = useApiCollection('leaderboard');
+  const apiEndpoint = '/api/leaderboard/';
+  const resource = useApiCollection(apiEndpoint);
 
   return (
     <CollectionPage

@@ -40,7 +40,7 @@ function normalizeCollectionPayload(payload) {
   return { items: [], count: 0, meta: {} };
 }
 
-export function useApiCollection(resource) {
+export function useApiCollection(endpointPath) {
   const [state, setState] = useState({
     count: 0,
     error: '',
@@ -50,7 +50,7 @@ export function useApiCollection(resource) {
     setupMessage: getApiSetupMessage()
   });
 
-  const resourceUrl = useMemo(() => getApiResourceUrl(resource), [resource]);
+  const resourceUrl = useMemo(() => getApiResourceUrl(endpointPath), [endpointPath]);
 
   useEffect(() => {
     const controller = new AbortController();
