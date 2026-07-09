@@ -2,11 +2,9 @@ import CollectionPage from './CollectionPage.jsx';
 import { useApiCollection } from './useApiCollection.js';
 
 export default function Workouts() {
-  const codespaceName = import.meta.env.VITE_CODESPACE_NAME?.trim() || '';
-  const apiBaseUrl = codespaceName
-    ? `https://${codespaceName}-8000.app.github.dev`
-    : 'http://localhost:8000';
-  const apiEndpoint = `${apiBaseUrl}/api/workouts/`;
+  const apiEndpoint = import.meta.env.VITE_CODESPACE_NAME
+    ? `https://${import.meta.env.VITE_CODESPACE_NAME}-8000.app.github.dev/api/workouts/`
+    : 'http://localhost:8000/api/workouts/';
   const resource = useApiCollection(apiEndpoint);
 
   return (
