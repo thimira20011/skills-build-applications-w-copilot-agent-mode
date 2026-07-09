@@ -1,0 +1,10 @@
+{
+  "name": "skills-build-applications-w-copilot-agent-mode",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npm run dev --prefix octofit-tracker/backend & npm run dev --prefix octofit-tracker/frontend",
+    "dev:backend": "npm run dev --prefix octofit-tracker/backend",
+    "dev:frontend": "npm run dev --prefix octofit-tracker/frontend"
+  }
+}
