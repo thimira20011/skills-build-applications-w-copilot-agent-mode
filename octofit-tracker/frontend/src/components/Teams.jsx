@@ -2,7 +2,11 @@ import CollectionPage from './CollectionPage.jsx';
 import { useApiCollection } from './useApiCollection.js';
 
 export default function Teams() {
-  const apiEndpoint = '/api/teams/';
+  const codespaceName = import.meta.env.VITE_CODESPACE_NAME?.trim() || '';
+  const apiBaseUrl = codespaceName
+    ? `https://${codespaceName}-8000.app.github.dev`
+    : 'http://localhost:8000';
+  const apiEndpoint = `${apiBaseUrl}/api/teams/`;
   const resource = useApiCollection(apiEndpoint);
 
   return (

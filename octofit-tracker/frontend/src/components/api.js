@@ -15,6 +15,10 @@ export function getApiBaseUrl() {
 }
 
 export function getApiResourceUrl(endpointPath) {
+  if (endpointPath.startsWith('http://') || endpointPath.startsWith('https://')) {
+    return endpointPath;
+  }
+
   return `${getApiBaseUrl()}${endpointPath}`;
 }
 
